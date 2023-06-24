@@ -46,11 +46,14 @@
 
 
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Space+Mono);
+
     :global(body) {
 	    --tw-gradient-to: #3b82f6;
 	    --tw-gradient-from: #06b6d4;
     	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     	background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        font-family: 'Space Mono', sans-serif;
 	}
 
     .center{
@@ -69,7 +72,7 @@
     }
 
     .search{
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: 100px;
     }
 
