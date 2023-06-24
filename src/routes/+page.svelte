@@ -1,4 +1,23 @@
-<form class="center">
+<script lang="ts">
+  function onSubmit(e) {
+    const formData = new FormData(e.target);
+
+    const data = {};
+    for (let field of formData) {
+      const [key, value] = field;
+      data[key] = value;
+    }
+    console.log(data)
+  }
+</script>
+
+<header>
+    <h1>Contract Explorer</h1>
+</header>
+
+<p>Like Internet Explorer, but for contracts.</p>
+
+<form class="center" on:submit|preventDefault={onSubmit}>
     <div class="search">
         <input type="text" class="searchTerm" placeholder="> contract address">
         <button type="submit" class="searchButton">Search</button>
