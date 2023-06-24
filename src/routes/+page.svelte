@@ -18,7 +18,7 @@
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
 
-<form class="center" on:submit|preventDefault={onSubmit}>
+<form class="" on:submit|preventDefault={onSubmit}>
     <div class="search">
         <input type="text" class="searchTerm" placeholder="> contract address">
         <button type="submit" class="searchButton">Search</button>
@@ -74,9 +74,15 @@
 
 
     /* ======== SEARCH BAR ======== */
+    form{
+        text-align: center;
+        margin-left: -120px;
+    }
+
     .search{
         margin-top: 100px;
         margin-left: 100px;
+        display: inline-block;
     }
 
     .searchTerm {
