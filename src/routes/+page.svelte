@@ -2,11 +2,25 @@
     import { whatsabi } from "@shazow/whatsabi";
     import { ethers } from "ethers";
 
+    import NFTWidget from '../components/NFTWidget.svelte';
+
     const provider = new ethers.providers.InfuraProvider("homestead", "22af2ac3832349cfb8b5c9e6d3b6197b");
 
     let loading = false;
     let address = "";
     let abi = [];
+    let typedWidget = false;
+    let widgetArgs = {};
+    let tokenId = "94"; // TODO: Unhardcode this
+
+    function detectWidget(abi) {
+        // TODO: The rest of the owl lol
+        typedWidget = NFTWidget;
+        widgetArgs = {
+            address,
+            tokenId,
+        }
+    }
 
     function loadABI(a) {
         if (loading) return;
@@ -16,9 +30,10 @@
         whatsabi.autoload(address, {
             provider,
             abiLoader: new whatsabi.loaders.EtherscanABILoader(),
-            signatureLookup: new whatsabi.loaders.OpenChainSignatureLookup(),
+            //signatureLookup: new whatsabi.loaders.OpenChainSignatureLookup(),
         }).then((result) => {
             abi = result;
+            detectWidget(abi);
         }).finally(() => {
             loading = false;
         });
@@ -69,6 +84,7 @@
 <div class="center content-container contract-hero">
     <img class="nft-img">
     <form on:submit|preventDefault={onSubmit}>
+    <form class="" on:submit|preventDefault={onSubmit}>
         <div class="search">
             <input type="text" class="searchTerm nft-search" placeholder="> NFT ID">
             <button type="submit" class="button searchButton">Search</button>
@@ -79,6 +95,8 @@
     </form>
 
 </div>
+
+<svelte:component this={typedWidget} {...widgetArgs} />
 
 <div class="content-container abi-dump">
 <code>
