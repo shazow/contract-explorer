@@ -66,8 +66,8 @@
     <p>Random unverified contract:</p>
 </div>
 
-<!-- <div class="center content-container">
-    <img src="" alt="">
+<div class="center content-container">
+    <img src="nft-img">
     <form class="" on:submit|preventDefault={onSubmit}>
         <div class="search">
             <input type="text" class="searchTerm" placeholder="> contract address">
@@ -78,7 +78,7 @@
         <p>Random unverified contract:</p>
     </form>
 
-</div> -->
+</div>
 
 <div class="content-container abi-dump">
 <code>
