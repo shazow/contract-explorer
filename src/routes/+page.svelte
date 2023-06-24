@@ -3,6 +3,7 @@
     import { ethers } from "ethers";
 
     import NFTWidget from '../components/NFTWidget.svelte';
+    import TokenWidget from '../components/NFTWidget.svelte';
 
     const provider = new ethers.providers.InfuraProvider("homestead", "22af2ac3832349cfb8b5c9e6d3b6197b");
 
@@ -20,6 +21,15 @@
                 address,
                 tokenId,
             }
+            return;
+        }
+        if (abi.filter((a) => a.type === "function" && a.name === "allowance").length > 0) {
+            // TODO: ...
+            //typedWidget = TokenWidget;
+            //widgetArgs = {
+            //    address,
+            //    tokenId,
+            //}
             return;
         }
         console.log("unknown type, no specialized widget yet");
