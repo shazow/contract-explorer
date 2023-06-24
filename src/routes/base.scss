@@ -9,9 +9,9 @@
     font-family: 'Space Mono', sans-serif;
 }
 
-.center{
-    margin: auto;
-    width: 50%;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .button {
@@ -33,10 +33,9 @@
 
 form{
     text-align: center;
-    margin-left: -120px;
 
     .search{
-        margin-left: 100px;
+        text-align: center;
         display: inline-block;
     }
 
@@ -64,28 +63,32 @@ form{
 }
 
 /* ======== HEADER ======== */
-header {
 
-    h1, p {
-    position: absolute;
+header {
     text-align: center;
     width: 100%;
     margin: 0;
+
+    h1 {
+        margin-top: 50px;
+        padding: 0;
     }
 }
 
 .logo-img {
-    max-width: 50px;
-    width: 50px;
-    height: 50px;
-    background-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 
 /* ======== SEARCH BAR ======== */
 
 form {
-    .contract-search{
+    .contract-search {
         min-width: 500px;
         margin-top: 100px;
     }
@@ -100,8 +103,14 @@ form {
 
 /* ======== EXAMPLES TEXT ======== */
 .examples-text{
+    min-width: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    a { 
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 

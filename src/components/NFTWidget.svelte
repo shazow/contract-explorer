@@ -46,17 +46,30 @@
         if (!address || !tokenId) {
             throw "loadNFT: Missing arguments";
         }
+        console.log("Loading NFT:", address, tokenId);
         const r = await client.request(query, {
             address, tokenId, blockchain
         });
         return r;
     }
 
-    onMount(async () => {
+    function onSubmit(e) {
+        const f = new FormData(e.target);
+        const id = f.get("tokenId") || "";
+        if (!id) return;
+
+        tokenId = id;
+        load();
+    }
+
+    async function load() {
+        ready = false;
         const r = await loadNFT(address, tokenId, blockchain);
         nft = r.TokenNft;
         ready = true;
-    });
+    }
+
+    onMount(load);
 </script>
 
 
@@ -65,7 +78,7 @@
   <img class="nft-img" src="{nft.metaData.image}">
   <form on:submit|preventDefault={onSubmit}>
       <div class="search">
-          <input type="text" class="searchTerm nft-search" placeholder="> NFT ID">
+          <input type="text" class="searchTerm nft-search" name="tokenId" value={tokenId} placeholder="> NFT TOKEN ID">
           <button type="submit" class="button searchButton">Search</button>
       </div>
       <p>{nft.metaData.name} - {nft.metaData.description}</p>

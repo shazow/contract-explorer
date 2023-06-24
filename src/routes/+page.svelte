@@ -78,17 +78,17 @@
 
 
 <header>
-    <h1>Contract Explorer</h1>
     <img class="logo-img" src="logo-large.png">
+    <h1>Contract Explorer</h1>
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
 
 <form on:submit|preventDefault={onSubmit} disabled="{!loading}">
-    <div class="search">
         <input type="text" class="searchTerm contract-search" name="address" value={address} placeholder="> contract address">
         <button type="submit" class="button searchButton">Search</button>
-    </div>
 </form>
+
+<section class="container">
 
 {#if loading}
 <div class="throbber" >
@@ -96,17 +96,18 @@
 </div>
 {/if}
 
-
-<div class="center examples-text">
+<div class="examples-text">
     <h2>Examples</h2>
-    <p>Nouns: <a on:click={searchAddress}>0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</a></p>
-    <p>MakerDAO:</p>
-    <p>ApeCoin:</p>
-    <p>Random unverified contract:</p>
+    <ul>
+        <li>Nouns: <a on:click={searchAddress}>0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</a></li>
+        <li>ApeCoin: <a on:click={searchAddress}>0x4d224452801aced8b2f0aebe155379bb5d594381</a></li>
+        <li>Rando Unverified Contract: <a on:click={searchAddress}>0xab4f32686cf8687d881462fe29170fb17180155b</a></li>
+    </ul>
 </div>
 
 <svelte:component this={typedWidget} {...widgetArgs} />
 
+{#if abi.length > 0}
 <div class="content-container abi-dump">
 <code>
     <button onclick="myFunction()" class="button">Copy text</button>
@@ -132,5 +133,8 @@
     </table> -->
 </code>
 </div>
+{/if}
+
+</section>
 
 <style src="./base.scss" lang="scss" />
