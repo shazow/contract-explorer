@@ -25,24 +25,18 @@
     </div>
 </form>
 
-<div>
-    <p>Examples:</p>
+<div class="center examples-text">
+    <h2>Examples</h2>
     <p>Nouns: 0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</p>
     <p>MakerDAO:</p>
     <p>ApeCoin:</p>
     <p>Random unverified contract:</p>
 </div>
 
-<div class="content-container">
-    <p>Examples:</p>
-    <p>Nouns: 0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</p>
-    <p>MakerDAO:</p>
-    <p>ApeCoin:</p>
-    <p>Random unverified contract: xx</p>
-</div>
-
-
 <style lang="scss">
+
+
+    /* ======== GLOBAL ======== */
     @import url(https://fonts.googleapis.com/css?family=Space+Mono);
 
     :global(body) {
@@ -53,6 +47,13 @@
         font-family: 'Space Mono', sans-serif;
 	}
 
+    .center{
+        margin: auto;
+        width: 50%;
+    }
+
+
+    /* ======== HEADER ======== */
     header h1 {
         position: absolute;
         text-align: center;
@@ -67,15 +68,12 @@
         margin: 0;
     }
 
-    .center{
-        margin: auto;
-        width: 50%;
-    }
-
     .logo-img {
         max-width: 50px;
     }
 
+
+    /* ======== SEARCH BAR ======== */
     .search{
         margin-top: 100px;
         margin-left: 100px;
@@ -115,4 +113,10 @@
 	.content-container{
 		background-color: rgba(0, 0, 0, 0.122);
 	}
+
+
+    /* ======== EXAMPLES TEXT ======== */
+    .examples-text{
+        margin-top: 50px;
+    }
 </style>
