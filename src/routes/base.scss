@@ -16,18 +16,14 @@
 
 
 /* ======== HEADER ======== */
-header h1 {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-}
+header {
 
-header p {
+    h1, p {
     position: absolute;
     text-align: center;
     width: 100%;
     margin: 0;
+    }
 }
 
 .logo-img {
@@ -39,47 +35,47 @@ header p {
 form{
     text-align: center;
     margin-left: -120px;
-}
 
-.search{
-    margin-top: 100px;
-    margin-left: 100px;
-    display: inline-block;
-}
+    .search{
+        margin-top: 100px;
+        margin-left: 100px;
+        display: inline-block;
+    }
 
-.searchTerm {
-    background: #00000057;
-    padding: 15px;
-    border-radius: 5px;
-    color: white;
-    min-width: 500px;
-    border-width: 0.7em;
-    border-color: #ffffff0d;
-    font-family: 'Space Mono', sans-serif;
-}
+    .searchTerm {
+        background: #00000057;
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+        min-width: 500px;
+        border-width: 0.7em;
+        border-color: #ffffff0d;
+        font-family: 'Space Mono', sans-serif;
+    }
 
-.searchButton {
-    width: 100px;
-    height: 36px;
-    border: none;
-    background: #00000028;
-    text-align: center;
-    color: #ffffff9a;
-    margin-left: -125px;
-    font-family: 'Space Mono', sans-serif;
-    cursor: pointer;
-}
+    .searchButton {
+        width: 100px;
+        height: 36px;
+        border: none;
+        background: #00000028;
+        text-align: center;
+        color: #ffffff9a;
+        margin-left: -125px;
+        font-family: 'Space Mono', sans-serif;
+        cursor: pointer;
+    }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(255, 255, 255, 0.542);
-}
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(255, 255, 255, 0.542);
+    }
 
-input:focus, select:focus, textarea:focus, button:focus {
-    outline: none;
-}
+    input:focus, select:focus, textarea:focus, button:focus {
+        outline: none;
+    }
 
-.content-container{
-    background-color: rgba(0, 0, 0, 0.122);
+    .content-container{
+        background-color: rgba(0, 0, 0, 0.122);
+    }
 }
 
 

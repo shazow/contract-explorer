@@ -44,7 +44,7 @@
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
 
-<form class="center" on:submit|preventDefault={onSubmit} disabled="{!loading}">
+<form on:submit|preventDefault={onSubmit} disabled="{!loading}">
     <div class="search">
         <input type="text" class="searchTerm" name="address" value={address} placeholder="> contract address">
         <button type="submit" class="searchButton">Search</button>
