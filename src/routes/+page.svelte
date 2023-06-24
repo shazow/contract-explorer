@@ -46,7 +46,7 @@
 
 <form on:submit|preventDefault={onSubmit} disabled="{!loading}">
     <div class="search">
-        <input type="text" class="searchTerm" name="address" value={address} placeholder="> contract address">
+        <input type="text" class="searchTerm contract-search" name="address" value={address} placeholder="> contract address">
         <button type="submit" class="button searchButton">Search</button>
     </div>
 </form>
@@ -68,10 +68,10 @@
 
 <div class="center content-container contract-hero">
     <img class="nft-img">
-    <form class="" on:submit|preventDefault={onSubmit}>
+    <form on:submit|preventDefault={onSubmit}>
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="> contract address">
-            <button type="submit" class="searchButton">Search</button>
+            <input type="text" class="searchTerm nft-search" placeholder="> NFT ID">
+            <button type="submit" class="button searchButton">Search</button>
         </div>
         <p>MakerDAO:</p>
         <p>ApeCoin:</p>

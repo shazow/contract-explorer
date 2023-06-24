@@ -31,6 +31,38 @@
     margin: 50px;
 }
 
+form{
+    text-align: center;
+    margin-left: -120px;
+
+    .search{
+        margin-top: 100px;
+        margin-left: 100px;
+        display: inline-block;
+    }
+
+    .searchTerm {
+        background: #00000057;
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+        border-width: 0.7em;
+        border-color: #ffffff0d;
+        font-family: 'Space Mono', sans-serif;
+    }
+
+    .searchButton {
+        margin-left: -125px;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(255, 255, 255, 0.542);
+    }
+
+    input:focus, select:focus, textarea:focus, button:focus {
+        outline: none;
+    }
+}
 
 /* ======== HEADER ======== */
 header {
@@ -52,40 +84,12 @@ header {
 
 
 /* ======== SEARCH BAR ======== */
-form{
-    text-align: center;
-    margin-left: -120px;
 
-    .search{
-        margin-top: 100px;
-        margin-left: 100px;
-        display: inline-block;
-    }
-
-    .searchTerm {
-        background: #00000057;
-        padding: 15px;
-        border-radius: 5px;
-        color: white;
+form {
+    .contract-search{
         min-width: 500px;
-        border-width: 0.7em;
-        border-color: #ffffff0d;
-        font-family: 'Space Mono', sans-serif;
-    }
-
-    .searchButton {
-        margin-left: -125px;
-    }
-
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: rgba(255, 255, 255, 0.542);
-    }
-
-    input:focus, select:focus, textarea:focus, button:focus {
-        outline: none;
     }
 }
-
 
 /* ======== ABI DUMP ======== */
 
@@ -105,6 +109,7 @@ form{
 .contract-hero {
     margin: auto;
     min-width: 700px;
+    display: flex;
 }
 
 .nft-img {
@@ -113,4 +118,17 @@ form{
     width: 250px;
     height: 250px;
     background-size: 250px;
+}
+
+form {
+    .nft-search{
+        background: #00000057;
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+        min-width: 200px;
+        border-width: 0.7em;
+        border-color: #ffffff0d;
+        font-family: 'Space Mono', sans-serif;
+    }
 }
