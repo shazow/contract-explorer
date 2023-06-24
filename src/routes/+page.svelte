@@ -24,6 +24,7 @@
             return;
         }
         if (abi.filter((a) => a.type === "function" && a.name === "allowance").length > 0) {
+            typedWidget = false;
             // TODO: ...
             //typedWidget = TokenWidget;
             //widgetArgs = {
