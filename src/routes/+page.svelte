@@ -89,10 +89,10 @@
         <button type="submit" class="button searchButton">Search</button>
     </div>
 </form>
-{#if loading}
 
+{#if loading}
 <div class="throbber" >
-    Loading...
+    <img class="spinner" src="spinner.png" alt="">
 </div>
 {/if}
 

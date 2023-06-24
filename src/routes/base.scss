@@ -105,4 +105,26 @@ form {
 }
 
 
-/* ======== CONTRACT INFO CONTAINER ======== */
+/* ======== SPINNER ======== */
+
+.throbber{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.spinner {
+    max-width: 50px;
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
