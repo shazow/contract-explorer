@@ -47,7 +47,7 @@
 <form on:submit|preventDefault={onSubmit} disabled="{!loading}">
     <div class="search">
         <input type="text" class="searchTerm" name="address" value={address} placeholder="> contract address">
-        <button type="submit" class="searchButton">Search</button>
+        <button type="submit" class="button searchButton">Search</button>
     </div>
 </form>
 {#if loading}
@@ -82,6 +82,7 @@
 
 <div class="content-container">
 <code class="abi-dump">
+    <button onclick="myFunction()" class="button">Copy text</button>
     {JSON.stringify(abi)}
 
     <!-- <table>
