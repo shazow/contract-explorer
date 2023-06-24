@@ -62,48 +62,18 @@
 
 {#if ready}
 <div class="center content-container contract-hero">
-
-    {nft.metaData.name} - {nft.metaData.description}
-
   <img class="nft-img" src="{nft.metaData.image}">
   <form on:submit|preventDefault={onSubmit}>
       <div class="search">
           <input type="text" class="searchTerm nft-search" placeholder="> NFT ID">
           <button type="submit" class="button searchButton">Search</button>
       </div>
-      <p>Attribute 1:</p>
-      <p>Attribute 2:</p>
-      <p>Attribute 3:</p>
+      <p>{nft.metaData.name} - {nft.metaData.description}</p>
   </form>
 </div>
 {:else}
 <div>Loading...</div>
 {/if}
 
-<style lang="scss">
-.contract-hero {
-    margin: auto;
-    min-width: 700px;
-    display: flex;
-}
 
-.nft-img {
-    max-width: 250px;
-    width: 250px;
-    height: 250px;
-    background-size: 250px;
-}
-
-form {
-    .nft-search{
-        min-width: 350px;
-        margin-left: 40px;
-        margin-top: 20px;
-    }
-
-    p {
-        text-align: left;
-        margin-left: 150px;
-    }
-}
-</style>
+<style src="./NFTWidget.scss" lang="scss" />
