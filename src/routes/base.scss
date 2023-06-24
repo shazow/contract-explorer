@@ -96,8 +96,21 @@ form {
 
 /* ======== ABI DUMP ======== */
 
+.abi-functions {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    li{ 
+        margin-left: 5px;
+        margin-top: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 2px;
+    }
+}
+
 .abi-dump {
     overflow: scroll;
+    margin: 20px 0;
     max-height: 200px;
 }
 
