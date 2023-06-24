@@ -18,7 +18,7 @@
     <p>Nouns: 0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</p>
     <p>MakerDAO:</p>
     <p>ApeCoin:</p>
-    <p>Random unverified contract:</p>
+    <p>Random unverified contract: xx</p>
 </div>
 
 
