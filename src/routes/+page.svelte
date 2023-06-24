@@ -40,7 +40,7 @@
 
 <header>
     <h1>Contract Explorer</h1>
-    <img class="logo-img">
+    <img class="logo-img" src="logo-large.png">
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
 
@@ -66,8 +66,8 @@
     <p>Random unverified contract:</p>
 </div>
 
-<div class="center content-container">
-    <img src="nft-img">
+<div class="center content-container contract-hero">
+    <img class="nft-img">
     <form class="" on:submit|preventDefault={onSubmit}>
         <div class="search">
             <input type="text" class="searchTerm" placeholder="> contract address">
