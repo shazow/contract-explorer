@@ -14,29 +14,43 @@
     let tokenId = "94"; // TODO: Unhardcode this
 
     function detectWidget(abi) {
-        // TODO: The rest of the owl lol
-        typedWidget = NFTWidget;
-        widgetArgs = {
-            address,
-            tokenId,
+        if (abi.filter((a) => a.type === "function" && a.name === "tokenURI").length > 0) {
+            typedWidget = NFTWidget;
+            widgetArgs = {
+                address,
+                tokenId,
+            }
+            return;
         }
+        console.log("unknown type, no specialized widget yet");
     }
 
-    function loadABI(a) {
+    async function loadABI(a) {
         if (loading) return;
         loading = true;
         address = a;
         console.log("Loading address:", address);
-        whatsabi.autoload(address, {
-            provider,
-            abiLoader: new whatsabi.loaders.EtherscanABILoader(),
-            //signatureLookup: new whatsabi.loaders.OpenChainSignatureLookup(),
-        }).then((result) => {
-            abi = result;
+        const codeLoader = new whatsabi.loaders.EtherscanABILoader({ apiKey: "SHT8M9JSGR62U5U7YVFUSTPG41IVR1F7ND" });
+        abi = await codeLoader.loadABI(address);
+        if (abi.length > 0) {
             detectWidget(abi);
-        }).finally(() => {
             loading = false;
+            return;
+        }
+
+        const code = await provider.getCode(address);
+        const selectors = whatsabi.selectorsFromBytecode(code);
+        const signatureLookup = new whatsabi.loaders.OpenChainSignatureLookup();
+        selectors.map((selector) => {
+            const signature = signatureLookup.loadFunctions(selector);
+            if (signature.length > 0) {
+                abi.push(signature[0]);
+            }
         });
+
+        loading = false;
+        detectWidget(abi);
+        return;
     }
 
     function onSubmit(e) {

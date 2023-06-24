@@ -55,7 +55,6 @@
     onMount(async () => {
         const r = await loadNFT(address, tokenId, blockchain);
         nft = r.TokenNft;
-        debugger;
         ready = true;
     });
 </script>
