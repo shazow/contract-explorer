@@ -78,7 +78,9 @@
 
 
 <header>
-    <img class="logo-img" src="logo-large.png">
+    <a href="/">
+        <img class="logo-img" src="logo-large.png">
+    </a>
     <h1>Contract Explorer</h1>
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
