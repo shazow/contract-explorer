@@ -12,7 +12,7 @@
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = [
-          pkgs.nodejs_20
+          pkgs.nodejs_18
         ];
 
         shellHook = ''
