@@ -21,6 +21,7 @@
 	"type": "module",
 	"dependencies": {
 		"@shazow/whatsabi": "^0.5.0",
-		"ethers": "^5.7.2"
+		"ethers": "^5.7.2",
+		"svelte-language-server": "^0.15.13"
 	}
 }
