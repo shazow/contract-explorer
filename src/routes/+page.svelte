@@ -24,7 +24,6 @@
             return;
         }
         if (abi.filter((a) => a.type === "function" && a.name === "allowance").length > 0) {
-            typedWidget = false;
             // TODO: ...
             //typedWidget = TokenWidget;
             //widgetArgs = {
@@ -101,6 +100,7 @@
     <a href="/">
         <img class="logo-img" src="logo-large.png">
     </a>
+    <button class="button connect-wallet">Connect Wallet</button>
     <h1>Contract Explorer</h1>
     <p>Like Internet Explorer, but for contracts.</p>
 </header>
