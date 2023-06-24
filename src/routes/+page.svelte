@@ -66,7 +66,7 @@
     <p>Random unverified contract:</p>
 </div>
 
-<div class="center content-container">
+<!-- <div class="center content-container">
     <img src="" alt="">
     <form class="" on:submit|preventDefault={onSubmit}>
         <div class="search">
@@ -78,10 +78,31 @@
         <p>Random unverified contract:</p>
     </form>
 
-</div>
+</div> -->
 
-<pre class="abi-dump">
+<div class="content-container">
+<code class="abi-dump">
     {JSON.stringify(abi)}
-</pre>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Payable</th>
+                <th>State Mutability</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each abi as selector, i}
+                <tr>
+                    <td class="border border-slate-300">{abi[i].type}</td>
+                    <td class="border border-slate-300">{abi[i].payable}</td>
+                    <td class="border border-slate-300">{abi[i].stateMutability}</td>
+                </tr>
+            {/each}
+        </tbody>
+    </table> -->
+</code>
+</div>
 
 <style src="./base.scss" lang="scss" />
