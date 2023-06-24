@@ -80,8 +80,8 @@
 
 </div> -->
 
-<div class="content-container">
-<code class="abi-dump">
+<div class="content-container abi-dump">
+<code>
     <button onclick="myFunction()" class="button">Copy text</button>
     {JSON.stringify(abi)}
 

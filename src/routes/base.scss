@@ -25,6 +25,12 @@
     cursor: pointer;
 }
 
+.content-container{
+    background-color: rgba(0, 0, 0, 0.122);
+    max-width: 100%;
+    margin: 50px;
+}
+
 
 /* ======== HEADER ======== */
 header {
@@ -81,10 +87,12 @@ form{
     }
 }
 
-.content-container{
-    background-color: rgba(0, 0, 0, 0.122);
-    max-width: 100%;
-    margin: 50px;
+
+/* ======== ABI DUMP ======== */
+
+.abi-dump {
+    overflow: scroll;
+    max-height: 200px;
 }
 
 /* ======== EXAMPLES TEXT ======== */
