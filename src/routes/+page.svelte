@@ -81,21 +81,6 @@
     <p>Random unverified contract:</p>
 </div>
 
-<div class="center content-container contract-hero">
-    <img class="nft-img">
-    <form on:submit|preventDefault={onSubmit}>
-    <form class="" on:submit|preventDefault={onSubmit}>
-        <div class="search">
-            <input type="text" class="searchTerm nft-search" placeholder="> NFT ID">
-            <button type="submit" class="button searchButton">Search</button>
-        </div>
-        <p>MakerDAO:</p>
-        <p>ApeCoin:</p>
-        <p>Random unverified contract:</p>
-    </form>
-
-</div>
-
 <svelte:component this={typedWidget} {...widgetArgs} />
 
 <div class="content-container abi-dump">
