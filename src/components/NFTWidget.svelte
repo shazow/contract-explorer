@@ -12,7 +12,12 @@
             description: null,
             image: null,
             attributes: [],
-        }
+        },
+        contentValue: {
+            image: {
+                medium: null,
+            }
+        },
     };
     let ready = false;
 
@@ -36,6 +41,11 @@
             attributes {
               trait_type
               value
+            }
+          }
+          contentValue {
+            image {
+              medium
             }
           }
         }
@@ -75,7 +85,7 @@
 
 {#if ready}
 <div class="center content-container contract-hero">
-  <img class="nft-img" src="{nft.metaData.image}">
+  <img class="nft-img" src="{nft.contentValue.image.medium}">
   <form on:submit|preventDefault={onSubmit}>
       <div class="search">
           <input type="text" class="searchTerm nft-search" name="tokenId" value={tokenId} placeholder="> NFT TOKEN ID">
