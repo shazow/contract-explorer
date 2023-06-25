@@ -14,6 +14,7 @@
     let widgetArgs = {};
     let tokenId = "94"; // TODO: Unhardcode this
     let spinner = "spinner.png";
+    let showExamples = false;
 
     function detectWidget(abi) {
         if (abi.filter((a) => a.type === "function" && a.name === "tokenURI").length > 0) {

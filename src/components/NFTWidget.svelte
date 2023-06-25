@@ -18,6 +18,9 @@
                 medium: null,
             }
         },
+        token: {
+            name: null,
+        }
     };
     let ready = false;
 
@@ -47,6 +50,9 @@
             image {
               medium
             }
+          }
+          token {
+            name
           }
         }
       }`;
@@ -87,11 +93,12 @@
 <div class="center content-container contract-hero">
   <img class="nft-img" src="{nft.contentValue.image.medium}">
   <form on:submit|preventDefault={onSubmit}>
+      <h3>{nft.token.name}</h3>
       <div class="search">
           <input type="text" class="searchTerm nft-search" name="tokenId" value={tokenId} placeholder="> NFT TOKEN ID">
           <button type="submit" class="button searchButton">Search</button>
       </div>
-      <p>{nft.metaData.name} - {nft.metaData.description}</p>
+      <p>{nft.metaData.description}</p>
   </form>
 </div>
 {:else}
