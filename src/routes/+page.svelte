@@ -13,6 +13,7 @@
     let typedWidget = false;
     let widgetArgs = {};
     let tokenId = "94"; // TODO: Unhardcode this
+    let spinner = "spinner.png";
 
     function detectWidget(abi) {
         if (abi.filter((a) => a.type === "function" && a.name === "tokenURI").length > 0) {
@@ -38,6 +39,10 @@
 
     async function loadABI(a) {
         if (loading) return;
+
+        if (a.toLowerCase() === "0x4d224452801aced8b2f0aebe155379bb5d594381") spinner = "spinner-ape.png";
+        else spinner = "spinner.png";
+
         loading = true;
         address = a;
         console.log("Loading address:", address);
@@ -114,7 +119,7 @@
 
 {#if loading}
 <div class="throbber" >
-    <img class="spinner" src="spinner.png" alt="">
+    <img class="spinner" src="{spinner}" alt="">
 </div>
 {/if}
 
